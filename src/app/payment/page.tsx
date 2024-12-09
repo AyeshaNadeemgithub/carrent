@@ -1,157 +1,323 @@
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import Link from "next/link";
-
-export default function Page() {
+const Home = () => {
   return (
-    <div className="payment w-full bg-[#f6f7f9] p-4 sm:p-6  flex flex-wrap gap-6 justify-center font-[family-name:var(--font-geist-sans)]">
-      <div className="cards w-full md:w-[70%] grid grid-cols-1 gap-6 order-2 lg:order-1">
-        <Card className="w-full lg:w-[852px] h-auto lg:h-[336px] flex flex-col justify-around">
-          <CardHeader>
-            <CardTitle>Billing Info</CardTitle>
-            <CardDescription className="w-full flex items-center justify-between">
-              <h1>Please enter your billing info</h1>
-              <h1>Step 1 of 4</h1>
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="flex flex-col gap-6">
-            <div className="w-full flex flex-wrap gap-4">
-              <div className="name flex flex-col gap-3 w-full lg:w-[46%]">
-                <label className="font-bold" htmlFor="name">Name</label>
-                <Input placeholder="Your Name" className="bg-[#f6f7f9] px-8 h-[56px] rounded-xl" />
-              </div>
-              <div className="num flex flex-col gap-3 w-full lg:w-[50%]">
-                <label className="font-bold" htmlFor="num">Phone Number</label>
-                <Input placeholder="Your Phone Number" className="bg-[#f6f7f9] px-8 h-[56px] rounded-xl" />
-              </div>
+    <div className="bg-gray-50 min-h-screen p-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Billing Info */}
+        <div className="lg:col-span-2 space-y-8">
+          {/* Billing Info Section */}
+          <div className="bg-white p-5 rounded-lg shadow-sm">
+            <h2 className="text-xl font-bold mb-1">Billing Info</h2>
+            <div className="flex items-center justify-between">
+              <p className="text-sm text-gray-500 mb-6">
+                Please enter your billing info
+              </p>
+              <h1 className="text-sm text-gray-500">Step 1 of 4</h1>
             </div>
-            <div className="w-full flex flex-wrap gap-4">
-              <div className="add flex flex-col gap-3 w-full lg:w-[46%]">
-                <label className="font-bold" htmlFor="add">Address</label>
-                <Input placeholder="Your Address" className="bg-[#f6f7f9] px-8 h-[56px] rounded-xl" />
+            <form className="flex flex-col gap-6">
+              <div className="w-full flex flex-wrap gap-6">
+                <div className="name flex flex-col gap-3 w-full lg:w-[46%]">
+                  <label className="font-semibold" htmlFor="name">
+                    Name
+                  </label>
+                  <input
+                    placeholder="Your Name"
+                    className="bg-[#f6f7f9] px-8 h-[56px] rounded-xl"
+                  />
+                </div>
+                <div className="num flex flex-col gap-3 w-full lg:w-[50%]">
+                  <label className="font-semibold" htmlFor="num">
+                    Phone Number
+                  </label>
+                  <input
+                    placeholder="Your Phone Number"
+                    className="bg-[#f6f7f9] px-8 h-[56px] rounded-xl"
+                  />
+                </div>
               </div>
-              <div className="city flex flex-col gap-3 w-full lg:w-[50%]">
-                <label className="font-bold" htmlFor="city">Town/City</label>
-                <Input placeholder="Your City" className="bg-[#f6f7f9] px-8 h-[56px] rounded-xl" />
+              <div className="w-full flex flex-wrap gap-6">
+                <div className="add flex flex-col gap-3 w-full lg:w-[46%]">
+                  <label className="font-semibold" htmlFor="add">
+                    Address
+                  </label>
+                  <input
+                    placeholder="Your Address"
+                    className="bg-[#f6f7f9] px-8 h-[56px] rounded-xl"
+                  />
+                </div>
+                <div className="city flex flex-col gap-3 w-full lg:w-[50%]">
+                  <label className="font-semibold" htmlFor="city">
+                    Town/City
+                  </label>
+                  <input
+                    placeholder="Your City"
+                    className="bg-[#f6f7f9] px-8 h-[56px] rounded-xl"
+                  />
+                </div>
               </div>
-            </div>
-          </CardContent>
-        </Card>
+            </form>
+          </div>
 
-    
-        <Card className="w-full lg:w-[852px] h-auto lg:h-[664px] flex flex-col justify-around">
-          <CardHeader>
-            <CardTitle>Rental Info</CardTitle>
-            <CardDescription className="w-full flex items-center justify-between">
-              <h1>Please select your rental date</h1>
-              <h1>Step 2 of 4</h1>
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="flex flex-col gap-6">
-            <div className="first">
-              <Image src={"/Pick - Up (1).png"} alt="Pick Up" width={92} height={20} />
+          {/* Rental Info Section */}
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <h2 className="text-xl font-bold mb-1">Rental Info</h2>
+            <div className="flex items-center justify-between">
+              <p className="text-sm text-gray-500 mb-6">
+                Please select your rental date
+              </p>
+              <h1 className="text-sm text-gray-500">Step 2 of 4</h1>
             </div>
-            <div className="sec w-full flex flex-wrap gap-4">
-              <div className="add flex flex-col gap-3 w-full lg:w-[46%]">
-                <label className="font-bold" htmlFor="add">Locations</label>
-                <select title="city" className="bg-[#f6f7f9] px-8 h-[56px] rounded-xl">
-                  <option value="">Select Your City</option>
-                </select>
-              </div>
-              <div className="city flex flex-col gap-3 w-full lg:w-[50%]">
-                <label className="font-bold" htmlFor="city">Date</label>
-                <select title="cty" className="bg-[#f6f7f9] px-8 h-[56px] rounded-xl">
-                  <option value="">Select Your Date</option>
-                </select>
+            <div className="space-y-6">
+              {/* Pick-Up Info */}
+              <div>
+                <div className="flex items-center gap-1 mb-4">
+                  <img src="/dot.png" alt="" width={18} />
+                  <p className="font-medium">Pick - Up</p>
+                </div>
+                <div className="sec w-full flex flex-wrap gap-7">
+                  <div className="add flex flex-col gap-3 w-full lg:w-[46%]">
+                    <label className="font-semibold" htmlFor="add">
+                      Locations
+                    </label>
+                    <select
+                      title="city"
+                      className="bg-[#f6f7f9] px-8 h-[56px] rounded-xl"
+                    >
+                      <option value="">Select Your City</option>
+                    </select>
+                  </div>
+                  <div className="city flex flex-col gap-3 w-full lg:w-[50%]">
+                    <label className="font-semibold" htmlFor="city">
+                      Date
+                    </label>
+                    <select
+                      title="cty"
+                      className="bg-[#f6f7f9] px-8 h-[56px] rounded-xl"
+                    >
+                      <option value="">Select Your Date</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="third w-full mb-7">
+                  <div className="city flex flex-col gap-3 mt-4 mb-3 w-full lg:w-[45%]">
+                    <label className="font-semibold" htmlFor="city">
+                      Time
+                    </label>
+                    <select
+                      title="cit"
+                      className="bg-[#f6f7f9] px-8 h-[56px] rounded-xl"
+                    >
+                      <option value="">Select Your Time</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="mb-8">
+                <div className="flex items-center gap-1 ">
+                  <img src="/dot.png" alt="" width={18} />
+                  <p className="font-medium">Drop - off</p>
+                </div>
+                </div>
+                <div className="sec w-full flex flex-wrap gap-7">
+                  <div className="add flex flex-col gap-3 w-full lg:w-[46%]">
+                    <label className="font-semibold" htmlFor="add">
+                      Locations
+                    </label>
+                    <select
+                      title="city"
+                      className="bg-[#f6f7f9] px-8 h-[56px] rounded-xl"
+                    >
+                      <option value="">Select Your City</option>
+                    </select>
+                  </div>
+                  <div className="city flex flex-col gap-3 w-full lg:w-[50%]">
+                    <label className="font-semibold" htmlFor="city">
+                      Date
+                    </label>
+                    <select
+                      title="cty"
+                      className="bg-[#f6f7f9] px-8 h-[56px] rounded-xl"
+                    >
+                      <option value="">Select Your Date</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="third w-full">
+                  <div className="city flex flex-col gap-3  mt-4 mb-3 w-full lg:w-[45%]">
+                    <label className="font-semibold" htmlFor="city">
+                      Time
+                    </label>
+                    <select
+                      title="cit"
+                      className="bg-[#f6f7f9] px-8 h-[56px] rounded-xl"
+                    >
+                      <option value="">Select Your Time</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="third w-full">
-              <div className="city flex flex-col gap-3 w-full lg:w-[45%]">
-                <label className="font-bold" htmlFor="city">Time</label>
-                <select title="cit" className="bg-[#f6f7f9] px-8 h-[56px] rounded-xl">
-                  <option value="">Select Your Time</option>
-                </select>
-              </div>
-            </div>
-            <div className="fourth">
-              <Image src={"/Drop - Off (1).png"} alt="Drop Off" width={104} height={20} />
-            </div>
-            <div className="sec w-full flex flex-wrap gap-4">
-              <div className="add flex flex-col gap-3 w-full lg:w-[46%]">
-                <label className="font-bold" htmlFor="add">Locations</label>
-                <select title="city" className="bg-[#f6f7f9] px-8 h-[56px] rounded-xl">
-                  <option value="">Select Your City</option>
-                </select>
-              </div>
-              <div className="city flex flex-col gap-3 w-full lg:w-[50%]">
-                <label className="font-bold" htmlFor="city">Date</label>
-                <select title="cty" className="bg-[#f6f7f9] px-8 h-[56px] rounded-xl">
-                  <option value="">Select Your Date</option>
-                </select>
-              </div>
-            </div>
-            <div className="third w-full">
-              <div className="city flex flex-col gap-3 w-full lg:w-[45%]">
-                <label className="font-bold" htmlFor="city">Time</label>
-                <select title="cit" className="bg-[#f6f7f9] px-8 h-[56px] rounded-xl">
-                  <option value="">Select Your Time</option>
-                </select>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+          </div>
 
+          {/* Payment Method Section */}
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h2 className="text-lg font-bold mb-1">Payment Method</h2>
+            <div className="flex items-center justify-between">
+              <p className="text-sm text-gray-500 mb-6">
+                Please enter your payment info
+              </p>
+              <h1 className="text-sm text-gray-500">Step 3 of 4</h1>
+            </div>
+            <div className="space-y-4 ">
+              <div className="bg-gray-100 rounded-md p-7">
+                <div className="flex items-center justify-between">
+                <div className="flex items-center gap-1 mb-4">
+                  <img src="/dot.png" alt="" width={18} />
+                  <p className="font-medium">Credit Card</p>
+                </div>
+                <Image src="/visa.png" alt=""  width={95} height={85} className="mb-3"/>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <input
+                    type="text"
+                    placeholder="Card number"
+                    className="p-3 border rounded-lg w-full"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Expiration date"
+                    className="p-3 border rounded-lg w-full"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Card holder"
+                    className="p-3 border rounded-lg w-full"
+                  />
+                  <input
+                    type="text"
+                    placeholder="CVC"
+                    className="p-3 border rounded-lg w-full"
+                  />
+                </div>
+              </div>
+              <div className="flex items-center  gap-4 bg-gray-100 p-2 rounded-lg">
+                <input
+                  type="radio"
+                  id="paypal"
+                  name="payment"
+                  className="mr-2"
+                />
+                <div className="flex w-full justify-between items-center">
+                <label htmlFor="paypal" className="text-gray-800 ">
+                  PayPal
+                </label>
+                <img src="/paypal1.png" alt="" className="h-4" />
+                </div>
+              </div>
 
-        <Card className="w-full lg:w-[852px] h-auto lg:h-[596px] flex flex-col justify-around">
-          <CardHeader>
-            <CardTitle>Payment Method</CardTitle>
-            <CardDescription className="w-full flex items-center justify-between">
-              <h1>Please enter your payment method</h1>
-              <h1>Step 3 of 4</h1>
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="flex flex-col gap-6">
-            <Image src={"/Credit Card.png"} alt="Credit Card" width={804} height={308} />
-            <Image src={"/PayPal.png"} alt="PayPal" width={804} height={56} />
-            <Image src={"/Bitcoin.png"} alt="Bitcoin" width={804} height={56} />
-          </CardContent>
-        </Card>
+              <div className="flex items-center  gap-4 bg-gray-100 p-2 rounded-lg">
+                <input
+                  type="radio"
+                  id="bitcoin"
+                  name="payment"
+                  className="mr-2"
+                />
+                <div className="flex w-full justify-between items-center">
+                <label htmlFor="bitcoin" className="text-gray-800">
+                  Bitcoin
+                </label>
+                <img src="/bitcoin.png" alt=""  className="h-4" />
+                </div>
+              </div>
+            </div>
+          </div>
 
-      
-        <Card className="w-full lg:w-[852px] h-auto lg:h-[484px] flex flex-col justify-around">
-          <CardHeader>
-            <CardTitle>Confirmation</CardTitle>
-            <CardDescription className="w-full flex items-center justify-between">
-              <h1>We are getting to the end. Just a few clicks and your rental is ready</h1>
-              <h1>Step 4 of 4</h1>
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="flex flex-col gap-8">
-            <Image src={"/Confirmation.png"} alt="Confirmation" width={804} height={136} />
-            <Link href={'/admin'}>
-            <button className="bg-[#3563e9] p-2 text-white rounded-xl w-[140px] h-[56px]">
+          {/* Confirmation Section */}
+          <div className="bg-white p-7 space-x-6 space-y-7 rounded-lg shadow-sm">
+            <h2 className="text-lg font-semibold mb-4">Confirmation</h2>
+            <p className="text-sm text-gray-500 mb-6">
+              We are getting to the end. Just a few clicks and your rental is
+              ready!
+            </p>
+            <div className="space-y-3">
+              <div className="flex items-center">
+                <input type="checkbox" id="marketing" className="mr-2" />
+                <label htmlFor="marketing" className="text-gray-600 text-sm">
+                  I agree with sending marketing and newsletter emails. No spam,
+                  promised!
+                </label>
+              </div>
+              <div className="flex items-center">
+                <input type="checkbox" id="terms" className="mr-2" />
+                <label htmlFor="terms" className="text-gray-600 text-sm">
+                  I agree with our terms and conditions and privacy policy.
+                </label>
+              </div>
+            </div>
+            <Link href="/admin">
+            <button className="mt-9 bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg">
               Rent Now
-            </button></Link>
-            
-            <Image src={"/Safe Data.png"} alt="Safe Data" width={548} height={100} />
-          </CardContent>
-        </Card>
-      </div>
-      <div className="details w-full flex-shrink-0 lg:w-[40%] order-1 lg:order-2 flex justify-center">
-        <Image src={"/Rental Summary.png"} alt="Rental Summary" width={492} height={568} className=" lg:w-[492px] h-[568px]"  />
+            </button>
+            </Link>
+            <p className="text-xs text-gray-500 mt-4">
+              All your data are safe. We are using the most advanced security to
+              provide you the best experience ever.
+            </p>
+          </div>
+        </div>
+
+        {/* Rental Summary */}
+        <div className="bg-white h-[25%] p-6 rounded-lg shadow-sm">
+          <h2 className="text-xl font-bold mb-2">Rental Summary</h2>
+          <p className="text-sm text-gray-500 mb-4">
+            Prices may change depending on the length of the rental and the
+            price of your rental car.
+          </p>
+          <div className="flex items-center gap-4 mb-4">
+            <img
+              src="/rental.png"
+              alt="Car Thumbnail"
+              className="w-30 h-20"
+            />
+            <div>
+              <h3 className="text-2xl font-bold">Nissan GT - R</h3>
+              
+              <p className="text-yellow-500 text-sm">
+                ★★★★☆ <span className="text-gray-500">440+ Reviewer</span>
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div className="space-y-2 text-sm mt-4">
+            <div className="flex justify-between text-gray-700">
+              <p>Subtotal</p>
+              <p>$80.00</p>
+            </div>
+            <div className="flex justify-between">
+              <p>Tax</p>
+              <p>$0</p>
+            </div>
+            <div className="flex justify-between items-center mt-7">
+              <input
+                type="text"
+                placeholder="Apply promo code"
+                className="p-2 border rounded-lg flex-1"
+              />
+              <button className="ml-2 bg-gray-100 px-4 py-2 rounded-lg">
+                Apply now
+              </button>
+            </div>
+          </div>
+          <div className="flex justify-between items-center mt-6 font-bold text-2xl">
+            <p className="text-md font-semibold text-gray-900">Total Rental Price</p>
+            <p>$80.00</p>
+          </div>
+          <p className="mt-2 text-gray-400 text-xs ">Overall price and includes rental discount</p>
+        </div>
       </div>
     </div>
   );
-}
+};
 
-
-
+export default Home;
