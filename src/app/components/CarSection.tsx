@@ -6,8 +6,8 @@ import { cars } from "@/data/cars"
 const CarSection = () => {
   return (
     <>
-    <div className="bg-gray-100 p-6">
-     <div className="first w-full flex items-center justify-between mb-4">
+    <div className="bg-gray-100 p-3 ">
+     <div className=" max-sm:text-sm  first w-full flex items-center justify-between mb-4 ">
           <h1 className="text-gray-500 ">Popular Car</h1>
           <Link href={"/categories"}>
             <h1 className="text-[#3563e9] font-bold hover:underline decoration-[#3563e9]">
@@ -16,14 +16,14 @@ const CarSection = () => {
           </Link>
         </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="flex max-md:gap-6 max-sm:overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-4">
         {popular_cars.map((car, index) => (
           <CarCard key={index} {...car} />
         ))}
       </div>
     </div>
       
-     <div className="bg-gray-100 p-6">
+     <div className="bg-gray-100 p-3">
       <h1 className=" text-gray-500 mb-4">Recommendation Car</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {cars.map((car, index) => (

@@ -3,18 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 const Home = () => {
   return (
-    <div className="bg-gray-50 min-h-screen p-8">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div className="bg-gray-50 min-h-screen p-8 max-md:p-4">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 ">
         {/* Billing Info */}
         <div className="lg:col-span-2 space-y-8">
           {/* Billing Info Section */}
-          <div className="bg-white p-5 rounded-lg shadow-sm">
+          <div className="max-sm:p-4 max-sm:text-sm bg-white p-5 rounded-lg shadow-md">
             <h2 className="text-xl font-bold mb-1">Billing Info</h2>
             <div className="flex items-center justify-between">
               <p className="text-sm text-gray-500 mb-6">
                 Please enter your billing info
               </p>
-              <h1 className="text-sm text-gray-500">Step 1 of 4</h1>
+              <h1 className="max-sm:hidden text-sm text-gray-500">Step 1 of 4</h1>
             </div>
             <form className="flex flex-col gap-6">
               <div className="w-full flex flex-wrap gap-6">
@@ -61,13 +61,13 @@ const Home = () => {
           </div>
 
           {/* Rental Info Section */}
-          <div className="bg-white p-6 rounded-lg shadow-sm">
+          <div className="max-sm:p-4 max-sm:text-sm bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-xl font-bold mb-1">Rental Info</h2>
             <div className="flex items-center justify-between">
               <p className="text-sm text-gray-500 mb-6">
                 Please select your rental date
               </p>
-              <h1 className="text-sm text-gray-500">Step 2 of 4</h1>
+              <h1 className="max-sm:hidden text-sm text-gray-500">Step 2 of 4</h1>
             </div>
             <div className="space-y-6">
               {/* Pick-Up Info */}
@@ -161,13 +161,13 @@ const Home = () => {
           </div>
 
           {/* Payment Method Section */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="max-sm:p-4 max-sm:text-sm bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-lg font-bold mb-1">Payment Method</h2>
             <div className="flex items-center justify-between">
               <p className="text-sm text-gray-500 mb-6">
                 Please enter your payment info
               </p>
-              <h1 className="text-sm text-gray-500">Step 3 of 4</h1>
+              <h1 className="max-sm:hidden text-sm text-gray-500">Step 3 of 4</h1>
             </div>
             <div className="space-y-4 ">
               <div className="bg-gray-100 rounded-md p-7">
@@ -234,7 +234,7 @@ const Home = () => {
           </div>
 
           {/* Confirmation Section */}
-          <div className="bg-white p-7 space-x-6 space-y-7 rounded-lg shadow-sm">
+          <div className="bg-white p-7 space-x-6 space-y-7 rounded-lg shadow-md">
             <h2 className="text-lg font-semibold mb-4">Confirmation</h2>
             <p className="text-sm text-gray-500 mb-6">
               We are getting to the end. Just a few clicks and your rental is
@@ -268,7 +268,7 @@ const Home = () => {
         </div>
 
         {/* Rental Summary */}
-        <div className="bg-white h-[25%] p-6 rounded-lg shadow-sm">
+        <div className="max-md:h-auto bg-white h-[25%] p-6 rounded-lg shadow-sm">
           <h2 className="text-xl font-bold mb-2">Rental Summary</h2>
           <p className="text-sm text-gray-500 mb-4">
             Prices may change depending on the length of the rental and the
@@ -298,13 +298,13 @@ const Home = () => {
               <p>Tax</p>
               <p>$0</p>
             </div>
-            <div className="flex justify-between items-center mt-7">
+            <div className="flex justify-between items-center  ">
               <input
                 type="text"
                 placeholder="Apply promo code"
                 className="p-2 border rounded-lg flex-1"
               />
-              <button className="ml-2 bg-gray-100 px-4 py-2 rounded-lg">
+              <button className="max-sm:hidden ml-3 bg-gray-100 px-4 py-2 rounded-lg">
                 Apply now
               </button>
             </div>

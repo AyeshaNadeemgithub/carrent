@@ -8,6 +8,7 @@ export const cars = [
     transmission: "Manual",
     seats: "6",
     imageUrl: "car1.png",
+    blur:"/shadow.png",
     filled:"/unfilled.png"
   },
   {
@@ -18,6 +19,7 @@ export const cars = [
     transmission: "Manual",
     seats: "6",
     imageUrl: "/car2.png",
+    blur:"/shadow.png",
     filled:"/filled.png"
   },
   {
@@ -29,6 +31,7 @@ export const cars = [
     transmission: "Manual",
     seats: "6",
     imageUrl: "/car3.png",
+    blur:"/shadow.png",
     filled:"/unfilled.png"
 
   },
@@ -40,6 +43,7 @@ export const cars = [
     transmission: "Manual",
     seats: "6",
     imageUrl: "/car4.png",
+    blur:"/shadow.png",
     filled:"filled.png"
   },
   {
@@ -50,6 +54,7 @@ export const cars = [
     transmission: "Manual",
     seats: "4",
     imageUrl: "/car5.png",
+    blur:"/shadow.png",
     filled:"/filled.png"
 
   },
@@ -61,6 +66,7 @@ export const cars = [
     transmission: "Manual",
     seats: "6",
     imageUrl: "/car6.png",
+    blur:"/shadow.png",
     filled:"/unfilled.png"
 
   },
@@ -72,6 +78,7 @@ export const cars = [
     transmission: "Manual",
     seats: "4",
     imageUrl: "/car7.png",
+    blur:"/shadow.png",
     filled:"/filled.png"
 
   },
@@ -83,6 +90,7 @@ export const cars = [
     transmission: "Manual",
     seats: "6",
     imageUrl: "/car8.png",
+    blur:"/shadow.png",
     filled:"/unfilled.png"
 
   },
@@ -97,6 +105,7 @@ export const popular_cars = [
     transmission: "Manual",
     seats: "2",
     imageUrl: "p1.png",
+    blur:"/shadow.png",
     filled:"/filled.png"
   },
   {
@@ -108,6 +117,7 @@ export const popular_cars = [
     transmission: "Manual",
     seats: "2",
     imageUrl: "p2.png",
+    blur:"/shadow.png",
     filled:"/unfilled.png"
   },
   {
@@ -119,6 +129,7 @@ export const popular_cars = [
     transmission: "Manual",
     seats: "4",
     imageUrl: "p3.png",
+    blur:"/shadow.png",
     filled:"/filled.png"
   },
   {
@@ -130,6 +141,7 @@ export const popular_cars = [
     transmission: "Manual",
     seats: "2",
     imageUrl: "p4.png",
+    blur:"/shadow.png",
     filled:"/unfilled.png"
   },
 ]

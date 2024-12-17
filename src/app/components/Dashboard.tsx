@@ -13,7 +13,7 @@ import {
 
 const Sidebar = () => {
   return (
-    <div className="h-full w-64 bg-white shadow-sm flex flex-col justify-between p-6 ">
+    <div className="hidden md:h-full w-64 bg-white shadow-sm md:flex flex-col justify-between p-6 ">
       {/* Main Menu */}
       <div>
         <h2 className="text-gray-500 text-sm font-semibold mb-4 space-x-5">MAIN MENU</h2>

@@ -2,6 +2,7 @@ import Image from "next/image";
 const Header = () => {
   return (
     <header className="px-3 py-3 flex justify-between items-center md:px-8 md:py-6 bg-white border border-gray-200">
+      
       {/* Logo */}
       <div className="flex items-center">
         <h1 className="text-xl ml-1 md:ml-5 text-blue-600 md:text-2xl font-bold">MORENT</h1>
@@ -9,7 +10,7 @@ const Header = () => {
 
       {/* Search Bar */}
       <div className=" hidden md:flex items-center
-       mx-[290px] w-[70vh] ml-4 px-3 border border-gray-300 rounded-full">
+       mx-[290px] w-[70vh] ml-4 px-3 border border-gray-300 rounded-full max-lg:mx-[490px] max-lg:w-[90vh]">
         <Image
           src="/search.png"
           alt="search"

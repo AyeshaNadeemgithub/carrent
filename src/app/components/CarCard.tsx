@@ -10,6 +10,7 @@ type CarCardProps = {
   transmission: string;
   seats: string;
   imageUrl: string;
+  blur:string;
   filled:string
 };
 
@@ -17,21 +18,22 @@ const CarCard: React.FC<CarCardProps> = ({
   name,
   type,
   price,
-  originalPrice,
   fuelCapacity,
   transmission,
   seats,
   imageUrl,
+  blur,
   filled,
 }) => {
   
   return (
-    <div className="container bg-white w-64 p-5 mb-1 rounded-lg shadow-md ">
+    <div className=" max-md:w-72 bg-white w-64 p-5 mb-1 rounded-lg shadow-md flex-shrink-0 ">
      
       <div className="mt-2">
         <h2 className="text-sm font-semibold flex  items-center justify-between">{name} <img src={filled} alt="" className='h-4' /></h2>
         <p className="text-sm text-gray-500">{type}</p>
         <img src={imageUrl} alt={name} className="mt-10 mb-10" />
+        <img src={blur} alt={name} className="mt-[-80px] " />
         <div className="flex items-center justify-between text-sm text-gray-500 mt-2">
         
           <span className='flex gap-1'><img src="/feul.png" alt="" className='h-4' />{fuelCapacity}</span>

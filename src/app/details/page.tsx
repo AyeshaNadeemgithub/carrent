@@ -10,7 +10,8 @@ import CarCard from "../components/CarCard";
 export default function page() {
   return (
     <div className="w-full flex">
-      <SideBar />
+            <div className="max-sm:hidden"><SideBar /></div>
+
       <div className="sec w-full sm:w-[75%] bg-[#f6f7f9] p-4 sm:p-6  flex flex-col gap-10 font-[family-name:var(--font-geist-sans)]">
         <section className=" w-full flex flex-col md:flex-row gap-5  items-center justify-around">
           <div className="first flex flex-col gap-4 w-full  lg:max-w-[470px]  lg:max-h-[508px]">
@@ -24,21 +25,21 @@ export default function page() {
             </div>
           </div>
 
-          <div className="flex bg-white h-[480px] w-full  lg:max-w-[492px] lg:max-h-[508px]  justify-between rounded-xl shadow-md">
+          <div className="flex bg-white max-md:h-[390px] h-[480px] w-full  lg:max-w-[492px] lg:max-h-[508px]  justify-between rounded-xl shadow-md">
             <div className="w-full h-full  p-7 ">
               {/* Title Section */}
               <div className="flex justify-between items-center">
-                <h1 className="text-3xl font-semibold">Nisaan GT - R</h1>
+                <h1 className="max-md:text-xl text-3xl font-semibold">Nisaan GT - R</h1>
                 <Image src="/filled.png" alt="" width={25} height={25}/>
               </div>
 
               {/* Description */}
-              <p className="text-gray-500 text-xl mt-6">
+              <p className="max-md:text-sm text-gray-500 text-xl mt-6">
               NISMO has become the embodiment of Nissan's outstanding performance, inspired by the most unforgiving proving ground, the "race track".
               </p>
 
               {/* Specifications */}
-              <div className="grid grid-cols-2 gap-4 mt-6 gap-y-4 gap-x-5 text-lg text-gray-600 py-5 ">
+              <div className="grid grid-cols-2 gap-4 mt-6 gap-y-4 gap-x-5 max-md:text-sm text-lg text-gray-600 py-5 ">
                 <div>
                   <span className="font-medium">Type Car:</span> Sport
                 </div>
@@ -76,7 +77,7 @@ export default function page() {
 
         <Reviews />
 
-        <div className="bg-transparent p-6 ">
+        <div className="bg-transparent p-3 ">
           <div className="first w-full flex items-center justify-between mb-4">
             <h1 className="text-gray-500 ">Popular Car</h1>
             <Link href={"/categories"}>
@@ -86,16 +87,16 @@ export default function page() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 ">
+          <div className="flex max-md:gap-6 max-sm:overflow-x-auto sm:grid sm:grid-cols-1 lg:grid-cols-3 ">
             {popular_cars.slice(0, 3).map((car, index) => (
               <CarCard key={index} {...car} />
             ))}
           </div>
         </div>
 
-        <div className="bg-transparent p-6">
+        <div className="bg-transparent p-3">
           <h1 className=" text-gray-500 mb-4">Recommendation Car</h1>
-          <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="flex max-md:gap-6 max-sm:overflow-x-auto sm:grid sm:grid-cols-1 lg:grid-cols-3">
             {cars.slice(0, 3).map((car, index) => (
               <CarCard key={index} {...car} />
             ))}
